@@ -12,8 +12,8 @@ const drumItem7 = document.getElementById("7");
 const drumItem8 = document.getElementById("8");
 const drumItem9 = document.getElementById("9");
 
-console.log(drumItem2);
-console.log("drumItem", drumItem);
+// console.log(drumItem2);
+// console.log("drumItem", drumItem);
 
 drumItem1.addEventListener("click", function(e) {
     console.log("klick1");
@@ -111,52 +111,36 @@ drumItem9.addEventListener("click", function(e) {
 //================================
 //============= PIANO  =========== 
 //================================
+const pianoContainer = document.querySelector(".pianoContainer");
+// console.log("pianoContainer", pianoContainer);
+const pianoItems = document.querySelectorAll(".pianoItem");
 
-// every time the cursor is moved over the pianoItems (li)
-let pianoContainer = document.querySelector(".pianoContainer")
-console.log("pianoContainer", pianoContainer);
+let pianoArray = [pianoSound1, pianoSound2, pianoSound3]
+
 pianoContainer.addEventListener("mouseover", function(event) {
-    // highlight the mouseover target
-    console.log("mouseover");
     event.target.style.backgroundColor = "orange";
-
-   // reset the color after a short delay
+//    reset the color after a short delay
    setTimeout(function() {
     event.target.style.backgroundColor = "";
-  }, 500);
-}, false);
+  }, 200);
+
+//VILL EJ ATT DE SKA SPELAS SAMTIDIGT DOCK
+  for (i=0; i<pianoArray.length; i++) {
+    // console.log(pianoArray[i])
+    if(pianoArray[0]) {
+        console.log("ljud 1");
+    }
+    if(pianoArray[1]) {
+        console.log("ljud 2");
+        break;
+    }
+     
+}
+
+}, false); 
 
 
 
-
-
-
-let test = document.getElementById("test");
-// This handler will be executed only once when the cursor moves over the unordered list
-
-console.log("test", test);
-test.addEventListener("mouseenter", function( event ) {
-    // highlight the mouseenter target
-    event.target.style.color = "purple";
-  
-    // reset the color after a short delay
-    setTimeout(function() {
-      event.target.style.color = "";
-    }, 500);
-  }, false);
-  
-  // This handler will be executed every time the cursor
-  // is moved over a different list item
-  test.addEventListener("mouseover", function( event ) {
-    // highlight the mouseover target
-    event.target.style.color = "orange";
-    console.log("orange");
-  
-    // reset the color after a short delay
-    setTimeout(function() {
-      event.target.style.color = "";
-    }, 500);
-  }, false);
 
 // document.addEventListener("keydown", function(evt){
 //     if (evt.key == "1") {
