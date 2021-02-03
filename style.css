@@ -1,0 +1,20 @@
+body {
+    background: pink;
+}
+
+.drumSet {
+    display: grid;
+    grid: repeat(3, 80px) / auto-flow 80px;
+    /* grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 150px 150px 150px;
+    padding-bottom: 50px; */
+}
+
+.drumBtn {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 65px;
+    height: 65px;
+    background-color: palegoldenrod;
+}
