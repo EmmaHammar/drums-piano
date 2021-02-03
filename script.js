@@ -15,12 +15,6 @@ const drumItem9 = document.getElementById("9");
 console.log(drumItem2);
 console.log("drumItem", drumItem);
 
-
-// const sound = document.getElementById("soundDrumClap");
-// sound.play();   
-
-
-
 drumItem1.addEventListener("click", function() {
     console.log("klick1");
     let sound1 = document.getElementById("sound1");
@@ -80,5 +74,3 @@ drumItem9.addEventListener("click", function() {
 //         sound.play(); 
 //     }
 // });
-
-
