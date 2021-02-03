@@ -2,7 +2,7 @@ body {
     background: pink;
 }
 
-.drumSet {
+.drumContainer {
     display: grid;
     grid: repeat(3, 80px) / auto-flow 80px;
     /* grid-template-rows: 150px 150px 150px;
@@ -10,7 +10,7 @@ body {
     padding-bottom: 50px; */
 }
 
-.drumBtn {
+.drumItem {
     /* display: flex;
     align-items: center;
     justify-content: center; */
