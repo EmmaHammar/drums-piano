@@ -19,44 +19,45 @@
         <div class="drumItem" id="8"></div>
         <div class="drumItem" id="9"></div>
     </div>
-
-    <audio id="sound1">
-        <source src="sounds/trummor_warm.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound2">
-        <source src="sounds/trummor_clap.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound3">
-        <source src="sounds/trummor_cowbell.wav" type="audio/wav">
-    </audio>
-
-    <audio id ="sound4">
-        <source src="sounds/trummor_hihats.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound5">
-        <source src="sounds/trummor_kick.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound6">
-        <source src="sounds/trummor_openhihats.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound7">
-        <source src="sounds/trummor_rim.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound8">
-        <source src="sounds/trummor_snare.wav" type="audio/wav">
-    </audio>
-    <audio id ="sound9">
-        <source src="sounds/trummor_stick.wav" type="audio/wav">
-    </audio>
+    
+    <div id="myDrums">
+        <audio id="sound1">
+            <source src="sounds/trummor_warm.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound2">
+            <source src="sounds/trummor_clap.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound3">
+            <source src="sounds/trummor_cowbell.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound4">
+            <source src="sounds/trummor_hihats.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound5">
+            <source src="sounds/trummor_kick.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound6">
+            <source src="sounds/trummor_openhihats.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound7">
+            <source src="sounds/trummor_rim.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound8">
+            <source src="sounds/trummor_snare.wav" type="audio/wav">
+        </audio>
+        <audio id ="sound9">
+            <source src="sounds/trummor_stick.wav" type="audio/wav">
+        </audio>
+    </div>
 
     <h2>Spela piano</h2>
     <ul class="pianoContainer">
-        <li class="pianoItem">
+        <li id="liPianoSound1" class="pianoItem">
             <audio id="pianoSound1">
                 <source src="sounds/synth_a_note.wav" type="audio/wav">
             </audio>
         </li>
-        <li class="pianoItem">
+        <li id="liPianoSound2" class="pianoItem">
             <audio id="pianoSound2">
                 <source src="sounds/synth_b_note.wav" type="audio/wav">
             </audio>
@@ -87,6 +88,9 @@
             </audio>
         </li>
     </ul>
+
+
+
     
     <script src="script.js"></script>
 </body>
