@@ -1,19 +1,14 @@
 body {
     background: pink;
+    margin-left: 10px;
 }
 
 .drumContainer {
     display: grid;
     grid: repeat(3, 80px) / auto-flow 80px;
-    /* grid-template-rows: 150px 150px 150px;
-    grid-template-columns: 150px 150px 150px;
-    padding-bottom: 50px; */
 }
 
 .drumItem {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     width: 65px;
     height: 65px;
     background-color: palegoldenrod;
@@ -21,17 +16,12 @@ body {
 
 .pianoContainer {
     display: grid;
-    grid: repeat(1, 0px) / auto-flow 60px;
-    padding: 0;
+    grid: repeat(1, 0) / auto-flow 60px;
 }
 
 .pianoItem {
     width: 50px;
     height: 100px;
     background-color: oldlace;
-    list-style-type: none;
+    margin: 5px;
 }  
-
-/* .pianoContainer:hover {
-
-} */

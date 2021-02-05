@@ -3,7 +3,6 @@ const drumContainer = document.querySelector(".drumContainer");
 //alla divar med class="drumItem"
 const drumItems = document.querySelectorAll("div.drumItem");
 
-//HUR ÄNDRA BAKGRUND NÄR DU TRYCKER 1 för box 1?
 //play drums when press 1-9 keys
 document.addEventListener("keydown", function(evt) {
     if (evt.key == "1") {
@@ -84,87 +83,82 @@ document.addEventListener("click", function(clickEvent) {
         sound9.play();
         changeColor();
     }
-})
-
+});
 
 //================================
 //============= PIANO  =========== 
 //================================
+const pianoContainer = document.querySelector("#pianoContainer");
 
-//ljudet
-let pianoSound1 = document.getElementById("pianoSound1");
-let pianoSound2 = document.getElementById("pianoSound2");
+//alla divar med class="pianoItem"
+const pianoItems = document.querySelectorAll("div.pianoItem");
 
-//li ljudet
-let liPianoSound1 = document.getElementById("liPianoSound1");
-let liPianoSound2 = document.getElementById("liPianoSound2");
+//piano sound when clicked keys a-j
+document.addEventListener("keydown", function(evt) {
+    // console.log(evt.key);
+    if (evt.key === "a") {
+        pianoSound1.play();;
+    }
+    if (evt.key === "s") {
+        pianoSound2.play();
+    }
+    if (evt.key === "d") {
+        pianoSound3.play();
+    }
+    if (evt.key === "f") {
+        pianoSound4.play();
+    }
+    if (evt.key === "g") {
+        pianoSound5.play();
+    }
+    if (evt.key === "h") {
+        pianoSound6.play();
+    }
+    if (evt.key === "j") {
+        pianoSound7.play();
+    }
+});
 
+//piano sound when mouseover
+document.addEventListener("mouseover", function(e) {
 
-//elementet li har eventListener
-liPianoSound1.addEventListener("mouseover", function() {
-    pianoSound1.play();
-    liPianoSound1.style.backgroundColor = "orange";
-    setTimeout(function() {
-        liPianoSound1.style.backgroundColor = "";
-    }, 200);
-})
+    //change key color when mouseover
+    function changeKeyColor() {
+        e.target.style.backgroundColor = "darkSalmon";
+        setTimeout(function() {
+            e.target.style.backgroundColor = "";
+        }, 300);
+    };
 
-liPianoSound2.addEventListener("mouseover", function() {
-    pianoSound2.play();
-    liPianoSound2.style.backgroundColor = "orange";
-    setTimeout(function() {
-        liPianoSound2.style.backgroundColor = "";
-    }, 200);
-})
+    console.log(e.target.id);
+    if (e.target.id == "pianoItem1") {
+        pianoSound1.play();
+        changeKeyColor();
+    }
+    if (e.target.id == "pianoItem2") {
+        pianoSound2.play();
+        changeKeyColor();
+    }
+    if (e.target.id == "pianoItem3") {
+        pianoSound3.play();
+        changeKeyColor();
+    }
+    if (e.target.id == "pianoItem4") {
+        pianoSound4.play();
+        changeKeyColor();
+    }
+    if (e.target.id == "pianoItem5") {
+        pianoSound5.play();
+        changeKeyColor();
+    }
+    if (e.target.id == "pianoItem6") {
+        pianoSound6.play();
+        changeKeyColor();
+    }
+    if (e.target.id == "pianoItem7") {
+        pianoSound7.play();
+        changeKeyColor();
+    }
+});
 
-
-
-/*
-const pianoContainer = document.querySelector(".pianoContainer");
-// console.log("pianoContainer", pianoContainer);
-const pianoItems = document.querySelectorAll(".pianoItem");
-
-let pianoArray = [pianoSound1, pianoSound2, pianoSound3, pianoSound4, pianoSound5, pianoSound6, pianoSound7];
-
-pianoContainer.addEventListener("mouseover", function(event) {
-    event.target.style.backgroundColor = "orange";
-
-    //Vill koppla till respektive tangent
-    document.getElementById("pianoSound1").play();
-
-//    reset the color after a short delay
-   setTimeout(function() {
-    event.target.style.backgroundColor = "";
-  }, 200);
-}); 
-*/
-
-//VILL EJ ATT DE SKA SPELAS SAMTIDIGT DOCK
-// for (i=0; i<pianoArray.length; i++) {
-//     console.log(pianoArray[i])
-
-//     pianoArray[0].addEventListener("mouseover",      function(event1) {
-//         console.log("mouseover pianoarray0");
-//         event1.target.style.backgroundColor = "pink";
-//     })
-// };
-
-
-        // if(pianoArray[0]) {
-        //     console.log("ljud 1");
-        //     document.getElementById("pianoSound1");
-        //     pianoSound1.play();
-        // }
-        // if(pianoArray[1]) {
-        //     console.log("ljud 2");
-        //     break;
-        // }
-        // };
-
-
-// document.addEventListener("keydown", function(evt){
-//     if (evt.key == "1") {
-//         var sound = document.getElementById("myAudio");
-//         sound.play(); 
-//     }
-// });
+//KVAR: HUR ÄNDRA FÄRG NÄR KEYDOWN för trummor resp synt??
