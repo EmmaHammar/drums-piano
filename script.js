@@ -268,6 +268,7 @@ document.addEventListener("keydown", function(evt) {
 document.addEventListener("mouseover", function(e) {
     console.log(e.target.id);
     if (e.target.id == "pianoItem1") {
+        // pianoSound1.currentTime = 0; 
         pianoSound1.play();
         changeColor(e);
     }

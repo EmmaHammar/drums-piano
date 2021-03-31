@@ -14,6 +14,12 @@ body {
     background-color: palegoldenrod;
 }
 
+.drumItem, .pianoItem {
+    text-align: center;
+    padding-top: 1vh;
+    font-size: 2rem;
+}
+
 .pianoContainer {
     display: grid;
     grid: repeat(1, 0) / auto-flow 60px;
