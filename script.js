@@ -2,171 +2,91 @@ const drumContainer = document.querySelector(".drumContainer");
 //alla divar med class="drumItem"
 const drumItems = document.querySelectorAll("div.drumItem");
 
+
 //play drums when press 1-9 keys
 document.addEventListener("keydown", function(evt) {
+    // console.log("alla drumItems", evt.target.childNodes[3].childNodes);
     switch (evt.key) {
         case "1":
             sound1.play(); 
-            drumItem1.classList.add("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[1]);
         break; 
         case "2":
             sound2.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.add("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[3]);
         break; 
         case "3":
             sound3.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.add("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[5]);
         break; 
         case "4":
             sound4.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.add("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[7]);
         break; 
         case "5":
             sound5.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.add("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[9]);
         break; 
         case "6":
             sound6.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.add("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[11]);
         break; 
         case "7":
             sound7.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.add("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[13]);
         break; 
         case "8":
             sound8.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.add("changeColorKey"); 
-            drumItem9.classList.remove("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[15]);
         break; 
         case "9":
             sound9.play(); 
-            drumItem1.classList.remove("changeColorKey"); 
-            drumItem2.classList.remove("changeColorKey"); 
-            drumItem3.classList.remove("changeColorKey"); 
-            drumItem4.classList.remove("changeColorKey"); 
-            drumItem5.classList.remove("changeColorKey"); 
-            drumItem6.classList.remove("changeColorKey"); 
-            drumItem7.classList.remove("changeColorKey"); 
-            drumItem8.classList.remove("changeColorKey"); 
-            drumItem9.classList.add("changeColorKey"); 
+            changeColorKey(evt.target.childNodes[3].childNodes[17]);
         break; 
     }
 });
 
+//ändra färg på keydown med css-klass
+function changeColorKey (element) {
+    element.classList.toggle("changeColorKey")
+      setTimeout( function() {
+         element.classList.toggle("changeColorKey")
+      },150)
+   }
+
 //play drums when click
 document.addEventListener("click", function(clickEvent) {
-    console.log(clickEvent);
-    console.log("clickEvent.target", clickEvent.target.id);
-        //remove ev initial colorChange
-        drumItem1.classList.remove("changeColorKey"); 
-        drumItem2.classList.remove("changeColorKey"); 
-        drumItem3.classList.remove("changeColorKey"); 
-        drumItem4.classList.remove("changeColorKey"); 
-        drumItem5.classList.remove("changeColorKey"); 
-        drumItem6.classList.remove("changeColorKey"); 
-        drumItem7.classList.remove("changeColorKey"); 
-        drumItem8.classList.remove("changeColorKey"); 
-        drumItem9.classList.remove("changeColorKey"); 
+    // console.log("varje drumItem vid klick", clickEvent.target);
+    changeColorKey(clickEvent.target);
 
     switch (clickEvent.target.id) {
         case "drumItem1":
             sound1.play();
-            changeColor(clickEvent);
+           
             break;
         case "drumItem2":
             sound2.play();
-            changeColor(clickEvent);
             break;
         case "drumItem3":
             sound3.play();
-            changeColor(clickEvent);
             break;
         case "drumItem4":
             sound4.play();
-            changeColor(clickEvent);
             break;
         case "drumItem5":
             sound5.play();
-            changeColor(clickEvent);
             break;
         case "drumItem6":
             sound6.play();
-            changeColor(clickEvent);
             break;
         case "drumItem7":
             sound7.play();
-            changeColor(clickEvent);
             break;
         case "drumItem8":
             sound8.play();
-            changeColor(clickEvent);
             break;
         case "drumItem9":
             sound9.play();
-            changeColor(clickEvent);
             break;
     };
 });
